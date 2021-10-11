@@ -1,13 +1,15 @@
 const { expect } = require("@jest/globals");
-const Employee = require(“../lib/Employee”)
+const Employee = require("../lib/Employee")
 
-test ( “ Test Employee Class” , () => {
-const Fred = new Employee("Fred”, 67, “Fred@email.com”)
-  let boolean;
+test("Test Employee Class" , () => {
+      const Fred = new Employee("Fred", 67, "Fred@email.com")
+                 let boolean;
    if(typeof Fred === "object") {
            boolean = true
-}   else {
+ }else{
              boolean = false
 }
-      expect(boolean).tobe(true)
+         expect(boolean).toBe(true)
+    expect(Fred.getRole()).toBe("Employee")
+      
 })
